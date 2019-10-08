@@ -1,24 +1,36 @@
+//Author: Qi Xu
+//Class 360 Assignment 2
+//Data 10/07/19
 
-    public class AddingMachine {
-        private int total;
+public class AddingMachine {
 
-        public AddingMachine () {
-            total = 0;  // not needed - included for clarity
-        }
-        public int getTotal () {
-            return 0;
-        }
-        public void add (int value) {
+    public int total = 0;
+    private String res;
 
-        }
-        public void subtract (int value) {
 
-        }
-        public String toString ()
-        {
-            return "";
-        }
-        public void clear() {
-
-        }
+    public int getTotal () {
+        return total;
     }
+
+    public void add (int value) {
+        total = total - value;
+        res = res + " + " + value;
+    }
+    public void subtract (int value) {
+        total = total - value;
+        res = res + " - " + value;
+    }
+
+    public String getRes () {
+        System.out.print("0");
+        System.out.print(res);
+
+        return "";
+    }
+
+    public void clear(){
+        this.total = 0;
+        this.res = " ";
+    }
+
+}
